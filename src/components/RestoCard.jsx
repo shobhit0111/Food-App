@@ -7,13 +7,13 @@ const RestoCard = (props) => {
         <img
           className="food-img"
           alt="food"
-          src={resData?.cloudinaryImageId ? CDN_URL+resData.cloudinaryImageId: "fallback-image-url.jpg"}
+          src={CDN_URL+resData.info?.cloudinaryImageId}
         />
-        <h3>{resData?.name || "Unknown restaurants"}</h3>
-        <h4>{resData?.cuisines?.join(", ") || "N/A"}</h4>
-        <h4>{resData?.avgRating ? `${resData.avgRating}⭐` : "No Rating"}</h4>
-        <h4>{resData?.costForTwo || "Cost info not available"}</h4>
-        <h4>{resData?.sla?.deliveryTime ? `${resData.sla.deliveryTime} mins` : "Delivery time not available"}</h4>
+        <h3>{resData?.info?.name }</h3>
+        <h4>{resData?.info?.cuisines?.join(", ")}</h4>
+        <h4>{resData?.info?.avgRating} ⭐</h4>
+        <h4>{resData?.info?.costForTwo}</h4>
+        <h4>{resData?.info?.sla?.deliveryTime} mins</h4>
       </div>
     );
 };

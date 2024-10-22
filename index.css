@@ -109,3 +109,15 @@
     border-radius: 10px;
     font-size: large;
 }
+.shimmer-container{
+    display:flex;
+    /* width:250px;
+    height:510px; */
+}
+.shimmer-card{
+    display:flex;
+    padding:5px;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(247, 209, 170, 0.67);
+}
